@@ -1,17 +1,19 @@
-import Creater from "./createroomform/index.jsx";
-
+import CreateRoomForm from "./createroomform";
+import JoinRoomForm from "./joinroomform";
+import './index.css'
 const Forms = () => {
   return (
-    <div className="flex flex-row items-center justify-center  h-screen gap-45 ">
-      {/* Create Room box */}
-      <div className=" w-80 h-80 border-1 border-blue-500 flex justify-center pt-5 ">
-        <h1 className="text-blue-600 font-bold text-3xl ">Create Room</h1>
-        {/* <Creater/> */}
+    <div className="row h-100 pt-5">
+      <div className="col-md-4 mx-auto mt-5  border rounded-2 border-primary d-flex flex-column align-items-center form-box py-3 px-5 
+      " >
+        <h1 className="text-primary fw-bold " >Create Room</h1>
+        <CreateRoomForm/>
       </div>
 
-      {/* Join Room box */}
-      <div className="w-80 h-80 border-1 border-blue-500 flex justify-center pt-5 ">
-        <h1 className="text-blue-600 font-bold text-3xl">Join Room</h1>
+      <div className="col-md-4 mx-auto mt-5 border  rounded-2 d-flex flex-column align-items-center border-primary form-box py-3 px-5  ">
+        <h1 className="text-primary fw-bold ">Join Room</h1>
+        <JoinRoomForm/>
+
       </div>
     </div>
   );
