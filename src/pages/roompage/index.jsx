@@ -1,7 +1,10 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import Whiteboard from "../../components/whiteboard"
 
 const RoomPage =()=>{
+
+    const canvasRef = useRef(null);
+    const ctxRef = useRef(null);
 
     const [tool,setTool] = useState("pencil")
     const [color,setColor] = useState("#000000")
@@ -48,7 +51,7 @@ const RoomPage =()=>{
 
             </div>
             <div className="col-md-10 mt-4 mx-auto canvas-box">
-                <Whiteboard/>
+                <Whiteboard  canvasRef={canvasRef} ctxRef={ctxRef}/>
             </div>
             </div>
         
